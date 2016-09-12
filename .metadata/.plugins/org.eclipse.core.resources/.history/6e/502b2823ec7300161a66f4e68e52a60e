@@ -1,0 +1,21 @@
+package com.orangehrm.testsuite;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import com.orangehrm.pageclasses.LoginPage;
+
+public class Login  extends BaseClass{
+	
+	@Test
+	public void loginTest()
+	{
+		driver=new FirefoxDriver();
+		driver.get("http://opensource.demo.orangehrmlive.com/index.php/auth/login");
+		LoginPage lp=PageFactory.initElements(driver,LoginPage.class);
+		lp.loginPanel("Admin","admin");
+	}
+	
+
+}

@@ -1,0 +1,12 @@
+
+<suite name="Newtours Demo Suite">
+  <test name="Enedtestingo end  ">
+    <classes>
+		<class name="day25.testsuite.Login"/>
+		<class name="day25.testsuite.FindAFlight"/>
+		<class name="day25.testsuite.SelectAFlight"/>
+		<class name="day25.testsuite.BookAFlight"/>
+        <class name="day25.testsuite.FlightConfirmation"/>
+    </classes>
+  </test> 
+</suite> 

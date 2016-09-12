@@ -1,0 +1,24 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
+
+
+public class BrowserStack {
+	@Test
+	public void sampleTest() throws MalformedURLException
+	{
+		WebDriver driver=null;
+		
+		DesiredCapabilities caps = DesiredCapabilities.safari();
+		caps.setCapability("platform", "OS X 10.10");
+		caps.setCapability("version", "8.0");
+		driver=new RemoteWebDriver(new URL("http://ondemand.saucelabs.com:80"),caps);
+		driver.get("http://google.com");
+	}
+
+}
